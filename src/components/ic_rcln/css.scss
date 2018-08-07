@@ -1,0 +1,427 @@
+@import "../core/core/mixins";
+@import "../core/core/variables";
+
+$classname: 'ic_rcln';
+// 編譯後的CSS所在位置，如果你的CSS有需要讀圖檔或字型，請在URL字串前加上'#{$resource-path}'
+$resource-path: '../../assets';
+// -------------------------------------
+// 您的CSS Code
+// -------------------------------------
+//以下範例可以刪除，改為您自已的CSS Code
+@font-face {
+    font-family: 'iconlion';
+    src: url('#{$resource-path}/fonts/iconlion.eot');
+    src: url('#{$resource-path}/fonts/iconlion.eot') format('embedded-opentype'),
+    url('#{$resource-path}/fonts/iconlion.ttf') format('truetype'),
+    url('#{$resource-path}/fonts/iconlion.woff') format('woff'),
+    url('#{$resource-path}/fonts/iconlion.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.#{$classname} {
+    $theme_red:#e10500;
+    $theme_red_lighter:#ff8b88;
+    $theme_red_darker:#bb0400;
+    $theme_orange_lighter:#fff9e3;
+    $theme_orange:#ff8400;
+    $theme_orange_darker:#8e561a;
+    $theme_aqua_lighter:#eaedf1;
+    $theme_aqua:#00a7e1;
+    $theme_aqua_darker:#0077b3;
+    $theme_grass:#00ccce;
+    $theme_turkeyblue_lighter:#86cacb;
+    $theme_turkeyblue_light:#00ccce;
+    $theme_turkeyblue:#14b1b2;
+    $theme_turkeyblue_darker:#1c9c9d;
+    $theme_lakegreen_lighter:#e0f2ed;
+    $theme_lakegreen_light:#cde4de;
+    $theme_lakegreen:#69c1a8;
+    $theme_lakegreen_darker:#24a07d;
+    $theme_soilgray_lighter:#efece7;
+    $theme_soilgray_light:#edeadc;
+    $theme_soilgray:#c0bba3;
+    $theme_soilgray_darker:#949289;
+    $theme_gray_lighter:#f7f7f7;
+    $theme_gray_light:#f1f1f1;
+    $theme_gray:#999;
+    $theme_gray_dark:#666;
+    $theme_gray_darker:#444;
+    font-family: 'iconlion' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+       &.tooladdb:before { content: "\e604"; }
+    &.tooladdbf:before { content: "\e605"; }
+    &.tooladds:before { content: "\e606"; }
+    &.tooladdsf:before { content: "\e607"; }
+    &.toolbefore:before { content: "\e608"; }
+    &.toolbuy:before { content: "\e609"; }
+    &.toolbuyf:before { content: "\e60a"; }
+    &.toolcancelb:before { content: "\e60b"; }
+    &.toolcancelbf:before { content: "\e60c"; }
+    &.toolcancels:before { content: "\e60d"; }
+    &.toolcancelsf:before { content: "\e60e"; }
+    &.toolcell:before { content: "\e60f"; }
+    &.toolcellf:before { content: "\e610"; }
+    &.toolchild:before { content: "\e611"; }
+    &.toolchildf:before { content: "\e612"; }
+    &.toolchina:before { content: "\e613"; }
+    &.toolchinaf:before { content: "\e600"; }
+    &.toolchoose:before { content: "\e614"; }
+    &.toolchoosen:before { content: "\e615"; }
+    &.toolchoosenf:before { content: "\e616"; }
+    &.toolcompare:before { content: "\e617"; }
+    &.toolcomparef:before { content: "\e618"; }
+    &.toolconstruction:before { content: "\e619"; }
+    &.toolconstructionf:before { content: "\e601"; }
+    &.toolcreditcard:before { content: "\e61a"; }
+    &.toolcreditcardf:before { content: "\e61b"; }
+    &.tooldate:before { content: "\e61c"; }
+    &.tooldatef:before { content: "\e61d"; }
+    &.toolearth:before { content: "\e61e"; }
+    &.toolearthf:before { content: "\e61f"; }
+    &.toolfb:before { content: "\e620"; }
+    &.toolfbf:before { content: "\e621"; }
+    &.toolfbround:before { content: "\e622"; }
+    &.toolfbroundf:before { content: "\e623"; }
+    &.toolfilter:before { content: "\e67b"; }
+    &.toolfilterf:before { content: "\e67c"; }
+    &.toolflag:before { content: "\e624"; }
+    &.toolflagf:before { content: "\e625"; }
+    &.toolfround:before { content: "\e626"; }
+    &.toolfroundf:before { content: "\e627"; }
+    &.toolgift:before { content: "\e628"; }
+    &.toolgiftf:before { content: "\e629"; }
+    &.toolground:before { content: "\e62a"; }
+    &.toolgroundf:before { content: "\e62b"; }
+    &.toolgroup:before { content: "\e62c"; }
+    &.toolgroupf:before { content: "\e62d"; }
+    &.toolhome:before { content: "\e67d"; }
+    &.toolhomef:before { content: "\e67e"; }
+    &.tooli:before { content: "\e62e"; }
+    &.toolid:before { content: "\e62f"; }
+    &.toolidf:before { content: "\e630"; }
+    &.toolif:before { content: "\e631"; }
+    &.toollike:before { content: "\e632"; }
+    &.toollikef:before { content: "\e633"; }
+    &.toollist:before { content: "\e634"; }
+    &.toolmail:before { content: "\e635"; }
+    &.toolmailf:before { content: "\e636"; }
+    &.toolmap:before { content: "\e637"; }
+    &.toolmapf:before { content: "\e602"; }
+    &.toolmember:before { content: "\e638"; }
+    &.toolmemberf:before { content: "\e639"; }
+    &.toolmenu:before { content: "\e67f"; }
+    &.toolmessage:before { content: "\e63a"; }
+    &.toolmessagef:before { content: "\e63b"; }
+    &.toolmyorder:before { content: "\e63c"; }
+    &.toolmyorderf:before { content: "\e63d"; }
+    &.toolnext:before { content: "\e63e"; }
+    &.toolpdfdownload:before { content: "\e63f"; }
+    &.toolpdfdownloadf:before { content: "\e640"; }
+    &.toolremind:before { content: "\e641"; }
+    &.toolremindf:before { content: "\e642"; }
+    &.toolsearch:before { content: "\e680"; }
+    &.toolseen:before { content: "\e643"; }
+    &.toolseenf:before { content: "\e644"; }
+    &.toolshare:before { content: "\e645"; }
+    &.toolsharef:before { content: "\e646"; }
+    &.toolstaff:before { content: "\e647"; }
+    &.toolstafff:before { content: "\e648"; }
+    &.toolsurvey:before { content: "\e649"; }
+    &.toolsurveyf:before { content: "\e603"; }
+    &.tooltaiwan:before { content: "\e64a"; }
+    &.tooltaiwanf:before { content: "\e64b"; }
+    &.tooltel:before { content: "\e64c"; }
+    &.tooltelf:before { content: "\e64d"; }
+    &.tooltop:before { content: "\e64e"; }
+    &.toolvisa:before { content: "\e64f"; }
+    &.toolvisaf:before { content: "\e650"; }
+    &.trafficbike:before { content: "\e681"; }
+    &.trafficbus:before { content: "\e682"; }
+    &.trafficbusf:before { content: "\e683"; }
+    &.trafficcar:before { content: "\e684"; }
+    &.trafficcarf:before { content: "\e685"; }
+    &.trafficcruiseship:before { content: "\e686"; }
+    &.trafficcruiseshipf:before { content: "\e687"; }
+    &.trafficferry:before { content: "\e688"; }
+    &.trafficferryf:before { content: "\e689"; }
+    &.traffichsr:before { content: "\e690"; }
+    &.traffichsrf:before { content: "\e691"; }
+    &.trafficlittlebus:before { content: "\e692"; }
+    &.trafficlittlebusf:before { content: "\e693"; }
+    &.trafficothers:before { content: "\e694"; }
+    &.trafficothersf:before { content: "\e695"; }
+    &.trafficrv:before { content: "\e696"; }
+    &.trafficrvf:before { content: "\e697"; }
+    &.traffictrafficcruiseshipf:before { content: "\e698"; }
+    &.traffictrain:before { content: "\e699"; }
+    &.traffictrainf:before { content: "\e69a"; }
+    &.traffictram:before { content: "\e69b"; }
+    &.traffictramf:before { content: "\e69c"; }
+    &.trafficwalk:before { content: "\e69d"; }
+    &.trafficwalkf:before { content: "\e69e"; }
+    &.scheduleKaohsiung:before { content: "\e69f"; }
+    &.scheduleski:before { content: "\e6a0"; }
+    &.scheduleskif:before { content: "\e6a1"; }
+    &.schedulesnowboard:before { content: "\e6a2"; }
+    &.schedulesnowboardf:before { content: "\e6a3"; }
+    &.scheduleTaichung:before { content: "\e6a4"; }
+    &.scheduletopic:before { content: "\e6a5"; }
+    &.orderdownload:before { content: "\e651"; }
+    &.orderdownloadf:before { content: "\e652"; }
+    &.orderedit:before { content: "\e653"; }
+    &.ordereditf:before { content: "\e654"; }
+    &.orderinsurance:before { content: "\e655"; }
+    &.orderinsurancef:before { content: "\e656"; }
+    &.orderotherrules:before { content: "\e657"; }
+    &.orderprint:before { content: "\e658"; }
+    &.orderprintf:before { content: "\e659"; }
+    &.ordersiting:before { content: "\e65a"; }
+    &.ordersitingf:before { content: "\e65b"; }
+    &.planeairplane:before { content: "\e6a6"; }
+    &.planeairplanef:before { content: "\e6a7"; }
+    &.planecabinclass:before { content: "\e6a8"; }
+    &.planecabinclassf:before { content: "\e6a9"; }
+    &.planelocation:before { content: "\e6aa"; }
+    &.planelocationf:before { content: "\e6ab"; }
+    &.planeticket:before { content: "\e6ac"; }
+    &.planeticketf:before { content: "\e6ad"; }
+    &.productrecommendf:before { content: "\e6ae"; }
+    &.producttrafficif:before { content: "\e6af"; }
+    &.productairlineFIT:before { content: "\e6b0"; }
+    &.productairlineFITf:before { content: "\e6b1"; }
+    &.productday1:before { content: "\e6b2"; }
+    &.productday1f:before { content: "\e6b3"; }
+    &.productday2:before { content: "\e6b4"; }
+    &.product_day2-f:before { content: "\e6b5"; }
+    &.productday3:before { content: "\e6b6"; }
+    &.product_day3-f:before { content: "\e6b7"; }
+    &.productday4:before { content: "\e6b8"; }
+    &.product_day4-f:before { content: "\e6b9"; }
+    &.productday5:before { content: "\e6c0"; }
+    &.productday5f:before { content: "\e6c1"; }
+    &.productdemosticFIT:before { content: "\e6c2"; }
+    &.productdemosticFITf:before { content: "\e6c3"; }
+    &.productdemosticGIT:before { content: "\e6c4"; }
+    &.productdescription:before { content: "\e6c5"; }
+    &.productdescriptionf:before { content: "\e6c6"; }
+    &.productexpiration:before { content: "\e6c7"; }
+    &.productexpirationf:before { content: "\e6c8"; }
+    &.productfeatures:before { content: "\e6c9"; }
+    &.productfeaturesf:before { content: "\e6ca"; }
+    &.productforeignFIT:before { content: "\e6cb"; }
+    &.productforeignFITf:before { content: "\e6cd"; }
+    &.productforeignGIF:before { content: "\e6ce"; }
+    &.productmeal:before { content: "\e6cf"; }
+    &.productmore:before { content: "\e6d0"; }
+    &.productmoref:before { content: "\e6d1"; }
+    &.productneari:before { content: "\e6d2"; }
+    &.productnearif:before { content: "\e6d3"; }
+    &.productnotice15:before { content: "\e6d4"; }
+    &.productnotice16:before { content: "\e6d5"; }
+    &.productprice:before { content: "\e6d7"; }
+    &.productpricef:before { content: "\e6d8"; }
+    &.productrecommend:before { content: "\e6d9"; }
+    &.productrefer:before { content: "\e6da"; }
+    &.productreferf:before { content: "\e6db"; }
+    &.productrule:before { content: "\e6dc"; }
+    &.productrulef:before { content: "\e6dd"; }
+    &.productsaferule:before { content: "\e6de"; }
+    &.productsaferulef:before { content: "\e6df"; }
+    &.producttraffici:before { content: "\e6e0"; }
+    &.ticketdepartment:before { content: "\e6e1"; }
+    &.ticketdepartmentf:before { content: "\e6e2"; }
+    &.ticketprepare:before { content: "\e6e3"; }
+    &.ticketpreparef:before { content: "\e6e4"; }
+    &.ticketticket:before { content: "\e6e5"; }
+    &.ticketticketf:before { content: "\e6e6"; }
+    &.hotelbusinesscen:before { content: "\e65c"; }
+    &.hotelbusinesscenf:before { content: "\e65d"; }
+    &.hoteldomesticBooking:before { content: "\e6e7"; }
+    &.hoteldomesticBookingf1:before { content: "\e6e8"; }
+    &.hoteldomesticBookingf2:before { content: "\e6e9"; }
+    &.hoteldomesticBookingf:before { content: "\e6ea"; }
+    &.hotelforeignBooking:before { content: "\e6eb"; }
+    &.hotelforeignBookingf:before { content: "\e6ec"; }
+    &.hotelgym:before { content: "\e65e"; }
+    &.hotelgymf:before { content: "\e65f"; }
+    &.hotelhotel:before { content: "\e660"; }
+    &.hotelhotelf:before { content: "\e661"; }
+    &.hotellocation:before { content: "\e662"; }
+    &.hotellocationf:before { content: "\e663"; }
+    &.hotelpark:before { content: "\e664"; }
+    &.hotelparkf:before { content: "\e665"; }
+    &.hotelpaycheckin:before { content: "\e6ed"; }
+    &.hotelpaycheckin1:before { content: "\e666"; }
+    &.hotelpaycheckin1f:before { content: "\e667"; }
+    &.hotelpaycheckin2:before { content: "\e668"; }
+    &.hotelpaycheckin2f:before { content: "\e669"; }
+    &.hotelpaycheckinf:before { content: "\e6ee"; }
+    &.hotelplayground:before { content: "\e66a"; }
+    &.hotelplaygroundf:before { content: "\e675"; }
+    &.hotelproject:before { content: "\e66b"; }
+    &.hotelprojectf:before { content: "\e66c"; }
+    &.hotelroom:before { content: "\e66d"; }
+    &.hotelroomf:before { content: "\e66e"; }
+    &.hotelseaview:before { content: "\e66f"; }
+    &.hotelseaviewf:before { content: "\e670"; }
+    &.hotelspa:before { content: "\e671"; }
+    &.hotelspaf:before { content: "\e672"; }
+    &.hotelswimpool:before { content: "\e673"; }
+    &.hotelwc:before { content: "\e674"; }
+    &.hotelwify:before { content: "\e676"; }
+    &.hotelwirenetwork:before { content: "\e677"; }
+    &.hotelwirenetworkf:before { content: "\e678"; }
+    &.hotelzoomin:before { content: "\e679"; }
+    &.hotelzoomout:before { content: "\e67a"; }
+    &.productbusseat:before { content: "\e900"; }
+    &.productbusdriver:before { content: "\e901"; }
+    &.productbustourguide:before { content: "\e902"; }
+    &.productconceptf:before { content: "\e903"; }
+    &.productdaybgf:before { content: "\e904"; }
+    &.tooladdb2:before { content: "\e905"; }
+    &.tooladds2:before { content: "\e906"; }
+    &.toolcancelb2:before { content: "\e907"; }
+    &.toolcancels2:before { content: "\e908"; }
+    &.planefood:before { content: "\e909"; }
+    &.planepackage:before { content: "\e90a"; }
+    &.planepackagef:before { content: "\e90b"; }
+    &.planetax:before { content: "\e90c"; }
+    &.planetaxf:before { content: "\e90d"; }
+    &.planetime:before { content: "\e90e"; }
+    &.planetimef:before { content: "\e90f"; }
+    &.planeticket2:before { content: "\e910"; }
+    &.planeticket2f:before { content: "\e911"; }
+    &.uspsearch:before { content: "\e912"; }
+    &.productcheckin:before { content: "\e913"; }
+    &.productcheckout:before { content: "\e914"; }
+    &.toolgroup:before { content: "\e915"; }
+    &.valuechange:before {content: "\e916";}
+    &.toolsearch2:before {content: "\e917";}
+    &.toolpen:before {content: "\e918";}
+    &.toolplanemoonf:before{content: "\e919";}
+    &.toollockf:before{content: "\e91a";}
+    &.clock:before{content: "\e91b";}
+    &.document:before{content: "\e91c";}
+    &.toolmember2f:before{content: "\e91d";}
+    &.x12 {
+        font-size:120%;
+    }
+    &.x15 {
+        font-size:148%;
+    }
+    &.x2 {
+        font-size:200%;
+    }
+    &.x3 {
+        font-size:300%;
+    }
+    &.x4 {
+        font-size:400%;
+    }
+    &.x5 {
+        font-size:500%;
+    }
+    &.lh1x {
+        line-height: 1;
+    }
+    &.link{
+        cursor: pointer;
+    }
+    &.circular{
+        border: 1px solid #ddd;
+        border-radius: 50%;
+    }
+    &.border{
+        border: 1px solid #ddd;
+    }
+    &.red{
+        color:#e10500;
+    }
+    &.red_lighter{
+        color:#ff8b88;
+    }
+    &.red_darker{
+        color:#bb0400;
+    }
+    &.orange_lighter{
+        color:#fff9e3;
+    }
+    &.orange{
+        color:#ff8400;
+    }
+    &.orange_darker{
+        color:#8e561a;
+    }
+    &.aqua_lighter{
+        color:#eaedf1;
+    }
+    &.aqua{
+        color:#00a7e1;
+    }
+    &.aqua_darker{
+        color:#0077b3;
+    }
+    &.grass{
+        color:#00ccce;
+    }
+    &.turkeyblue_lighter{
+        color:#86cacb;
+    }
+    &.turkeyblue_light{
+        color:#00ccce;
+    }
+    &.turkeyblue{
+        color:#14b1b2;
+    }
+    &.turkeyblue_darker{
+        color:#1c9c9d;
+    }
+    &.lakegreen_lighter{
+        color:#e0f2ed;
+    }
+    &.lakegreen_light{
+        color:#cde4de;
+    }
+    &.lakegreen{
+        color:#69c1a8;
+    }
+    &.lakegreen_darker{
+        color:#24a07d;
+    }
+    &.soilgray_lighter{
+        color:#efece7;
+    }
+    &.soilgray_light{
+        color:#edeadc;
+    }
+    &.soilgray{
+        color:#c0bba3;
+    }
+    &.soilgray_darker{
+        color:#949289;
+    }
+    &.gray_lighter{
+        color:#f7f7f7;
+    }
+    &.gray_light{
+        color:#f1f1f1;
+    }
+    &.gray{
+        color:#999;
+    }
+    &.gray_dark{
+        color:#666;
+    }
+    &.gray_darker{
+        color:#444;
+    }
+}
