@@ -1,0 +1,220 @@
+@import "../core/core/mixins";
+@import "../core/core/variables";
+
+$classname: 'cy_rnmb';
+$theme_color_red: #e10500;
+$theme_color_pink: #ffe2e1;
+$theme_color_gray: #ddd;
+$theme_color_darken_gray: #aaa;
+$theme_color_green: #69c1a8;
+$theme_color_blue: #2e8fc0;
+
+// 月曆主內容
+.cy_rnmb_main_content {
+	// debug Start
+	width: 450px;
+	position: absolute;
+	top: 100%;
+	left: 0; 
+	// display: inline-flex;
+	// debug End
+	display: none;
+	outline: none;
+	&.open {
+		display: inline-flex;
+	}
+
+
+	
+	// main_content_calender
+	.cy_rnmb_main_content_calender {
+		width: 50%;
+		border: 1px solid $theme_color_gray;
+		color: #444;
+		background-color: #fff;
+		z-index: 999;
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	// main_content_calender_header
+	.cy_rnmb_main_content_calender_header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid $theme_color_gray;
+		background-color: #f4f4f4;
+		.cy_rnmb_main_content_calender_header_prev,
+		.cy_rnmb_main_content_calender_header_next {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
+			color: white;
+			font-size: 24px;
+			background-color: $theme_color_red;
+			cursor: pointer;
+			
+			&.no_show {
+				visibility: hidden;
+				background-color: transparent;
+			}
+			&.disabled {
+				cursor: default;
+				background-color: #d8d8d8;
+			}
+		}
+	} 
+	// main_content_calender_body
+	.cy_rnmb_main_content_calender_body {
+		padding: 5px;
+	}
+
+	ul.cy_rnmb_main_content_calender_body_weeks,
+	ul.cy_rnmb_main_content_calender_body_days {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			// flex: calc(100% / 7);
+			width: 14.28571%;
+			flex-grow: 0;
+			text-align: center;
+		}
+	} 
+	// 星期列
+	ul.cy_rnmb_main_content_calender_body_weeks {
+		margin-bottom: 5px;
+		li.isHoliday{
+			color: $theme_color_red;
+		}
+	} 
+	// 日期列
+	ul.cy_rnmb_main_content_calender_body_days {
+		li {
+			cursor: pointer;
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			background-color: #f4f4f4;
+			user-select: none;
+			
+
+			&.isToday,
+			&.isHoliday{
+				color: $theme_color_red;
+			}
+			
+			&.isStart,
+			&.isEnd,
+			&.isHover {
+				background-color: $theme_color_red;
+				color: #fff;
+			}
+
+			&.isBetween {
+				background-color: $theme_color_pink;
+				// color: #fff;
+			}
+			&.disabled.disabled {
+				cursor: default;
+				color: #ccc;
+				background-color: #f4f4f4;
+				&.isToday,
+				&.isHoliday {
+					color: lighten($theme_color_red, 40%);
+				}
+			}
+		}
+	}
+} 
+.#{$classname} {	
+	&{
+		position: relative;
+		border: 1px solid $theme_color_gray;
+		background-color: #fff;
+		padding: 5px 0px;
+	}
+	// custom_content
+	.cy_rnmb_custom_content{
+		outline: none;
+	}
+
+	// 上方搜尋 input
+	.cy_rnmb_search_panel {
+		display: flex;
+		align-items: flex-end;
+		// debug
+		// border: 1px solid $theme_color_gray;
+		// debug
+		padding: 0px 5px;
+		cursor: pointer;
+		&.isFocus {
+			border-color: $theme_color_green;
+		}
+	
+		.int_rcln_calender {
+			flex-grow: 1;
+			input {
+				width: 100%;
+				padding-right: 0;
+				font-size: 16px;
+				font-weight: normal;
+				color: $theme_color_blue;
+				line-height: 22px;
+
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				&::placeholder {
+					color: $theme_color_darken_gray;
+				}
+			}		
+		}
+		
+		// sign === ~ , night 幾晚
+		.int_rcln_calender_sign,
+		.int_rcln_calender_night {
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		.int_rcln_calender_night {
+			color: $theme_color_blue;
+			flex: 1 1 230px;
+		}
+
+		&.doubleWay {
+			input {
+				font-weight: bold;
+			}
+		}
+
+		&.isBorder.isBorder {
+			input {
+				font-weight: normal;
+			}
+			// border Style
+			.cy_rnmb_search_panel_border {
+				align-self: stretch;
+				border-left: 1px solid #ddd;
+			}
+
+			.int_rcln_calender_sign,
+			.int_rcln_calender_night {
+				font-weight: normal;
+			}
+		}
+		// 有icon模式
+		.cy_rnmb_search_panel_icon {
+			font-size: 30px;
+			color: #aaa;
+			align-self: center;
+			padding: 0px 5px;
+		}
+	}
+}
+
+
